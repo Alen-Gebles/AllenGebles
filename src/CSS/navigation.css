@@ -1,8 +1,3 @@
-.cvemail::selection{
-  color: var(--main-orange-clr);
-  background-color: white;
-}
-
 .navigation-blur{
   width: 100vw;
   height: 85px;
@@ -171,6 +166,7 @@
   font-weight: 900;
   letter-spacing: 2px;
   text-decoration: none;
+  transition: 300ms;
 }
 .mobile-nav-link:hover .navLine1{
   width: 0vw;
@@ -256,5 +252,9 @@
   }
   .bottomNav{
     display: none;
+  }
+  #navigation{
+    width: calc(100vw - 50px);
+    padding-inline: 30px 20px;
   }
 }
