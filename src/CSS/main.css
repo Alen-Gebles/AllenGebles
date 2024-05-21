@@ -816,7 +816,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: 55px;
+  font-size: max(35px, min(4vw, 55px));
   white-space: nowrap;
   height: 100px;
   font-family: ClashDisplay-Medium;
@@ -838,7 +838,8 @@
 .skillsLeftBottom{
   width: 100%;
   padding-top: 40px;
-  font-size: 25px;
+  font-size: max(20px, min(3vw, 25px));
+  text-wrap: balance;
 }
 
 /*////////////////////RESUME///////////////////////////*/
@@ -1145,8 +1146,15 @@
     top: -100px;
   }
   .card{
-    height: 400px;
-    max-width: 280px;
+    position: absolute;
+    height: 380px;
+    border-radius: 10px;
+    width: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 350ms;
+    padding: 20px;
+    border: 1px solid var(--border-clr);
   }
   #resumeContainer{
     height: 700px;
@@ -1159,7 +1167,7 @@
   }
   .skills{
     position: sticky;
-    height: 600px;
+    height: 500px;
     top: 200px;
     margin-bottom: 200px;
     display: flex;

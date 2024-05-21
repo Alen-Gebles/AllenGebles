@@ -148,6 +148,9 @@ body::before {
 }
 
 @media (width <= 700px){
+  body{
+    zoom: 100%;
+  }
   .fotterBottomLinks{
     gap: 5px;
     flex-direction: column;

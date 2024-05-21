@@ -27,7 +27,6 @@
   color: var(--white-font-color);
   padding-inline: 30px 40px;
   z-index: 1000000;
-  box-shadow: inset 0px 30px 30px var(--bg-clr);
 }
 .navMenu{
   list-style: none;

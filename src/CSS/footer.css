@@ -83,13 +83,14 @@
 }
 .footerText{
   color: var(--bg-clr);
+  font-size: max(15px, min(2vw, 20px));
 }
 
 #connect{
   font-family: ClashDisplay-Medium;
   font-weight: 600;
   letter-spacing: 4px;
-  font-size: max(50px, min(7vw, 125px));
+  font-size: max(40px, min(7vw, 125px));
   word-wrap: break-word;
   width: 10ch;
   color: var(--footer-font-color);
@@ -172,7 +173,7 @@
 
 @media (width <= 726px){
   #connect{
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .innerFooterContainer{
     flex-direction: column;
