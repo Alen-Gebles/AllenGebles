@@ -816,7 +816,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: max(35px, min(4vw, 55px));
+  font-size: max(30px, min(4vw, 55px));
   white-space: nowrap;
   height: 100px;
   font-family: ClashDisplay-Medium;
