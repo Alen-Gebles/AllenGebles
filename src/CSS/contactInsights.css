@@ -116,4 +116,5 @@
   color: var(--lightgray-clr);
   font-weight: 100;
   white-space: nowrap;
+  font-size: max(10px, min(2vw, 18px));
 }
