@@ -5,6 +5,42 @@ const bottomNav = document.getElementById("bottomNav")
 const linktwo = document.getElementById("linktwo")
 const contactMainContainer = document.getElementById("contactMainContainer")
 const mainContainer = document.getElementById("mainContainer")
+const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn")
+///////////////////////////////////////
+
+mobileMenuBtn.forEach((menuBtn) => {
+  menuBtn.addEventListener("click", () => {
+  if (mobileNav.style.transform === "translateX(-100%)") {
+    mobileNav.style.transform = "translateX(0%)";
+    bodyElement.style.overflow = "hidden";
+  } else {
+    closeNav();
+  }
+})
+})
+
+
+function closeNav() {
+  mobileNav.style.transform = "translateX(-100%)";
+  bodyElement.style.overflow = "";
+}
+
+const closeNavAndScrollToTop = () => {
+  closeNav();
+  window.scrollTo(0, 0);
+};
+
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    closeNav();
+    section.scrollIntoView();
+  }
+}
+
+document.getElementById("projectsMenu").addEventListener("click", () => scrollToSection("projectsContainer"));
+document.getElementById("homeMenu").addEventListener("click", closeNavAndScrollToTop);
+console.log(mobileMenuBtn)
 
 /////////////////////////////////////
 
@@ -138,36 +174,5 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
 //////////insights btn////////////////
-
-function closeNav() {
-  mobileNav.style.transform = "translateX(-100%)";
-  bodyElement.style.overflow = "";
-}
-
-document.getElementById("menuNav").onclick = () => {
-  if (mobileNav.style.transform === "translateX(-100%)") {
-    mobileNav.style.transform = "translateX(0%)";
-    bodyElement.style.overflow = "hidden";
-  } else {
-    closeNav();
-  }
-};
-
-const closeNavAndScrollToTop = () => {
-  closeNav();
-  window.scrollTo(0, 0);
-};
-
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    closeNav();
-    section.scrollIntoView();
-  }
-}
-
-document.getElementById("projectsMenu").addEventListener("click", () => scrollToSection("projectsContainer"));
-document.getElementById("homeMenu").addEventListener("click", closeNavAndScrollToTop);
 /////////////////////////////////////////
