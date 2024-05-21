@@ -96,19 +96,17 @@
 .btn-posnawr span {
   position: absolute;
   display: block;
-  width: 0;
-  height: 0;
-  border-radius: 30px;
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
   background-color: var(--orange-300);
-  -webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out;
-  transition: width 300ms ease-in-out, height 300ms ease-in-out;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   z-index: -1;
+  transition: 400ms;
+  opacity: 0;
 }
 .btn-posnawr:hover span {
-  width: 225%;
-  height: 562.5px;
+  scale: 160;
+  opacity: 1;
 }
 /*/////////////////////////////*/
 

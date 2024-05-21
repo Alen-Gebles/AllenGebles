@@ -6,6 +6,39 @@ const linktwo = document.getElementById("linktwo")
 const contactMainContainer = document.getElementById("contactMainContainer")
 const mainContainer = document.getElementById("mainContainer")
 const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn")
+
+///////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+  var btnPosnawr = document.querySelectorAll('.btn-posnawr');
+
+  btnPosnawr.forEach(function(btn) {
+    btn.addEventListener('mouseenter', function(e) {
+      var parentOffset = this.getBoundingClientRect(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+      this.querySelector('span').style.top = relY + 'px';
+      this.querySelector('span').style.left = relX + 'px';
+    });
+
+    btn.addEventListener('mouseout', function(e) {
+      var parentOffset = this.getBoundingClientRect(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+      this.querySelector('span').style.top = relY + 'px';
+      this.querySelector('span').style.left = relX + 'px';
+    });
+  });
+
+  var hrefElements = document.querySelectorAll('[href="#"]');
+  hrefElements.forEach(function(elem) {
+    elem.addEventListener('click', function(event) {
+      event.preventDefault();
+    });
+  });
+});
+
+
 ///////////////////////////////////////
 
 mobileMenuBtn.forEach((menuBtn) => {
@@ -40,7 +73,6 @@ function scrollToSection(sectionId) {
 
 document.getElementById("projectsMenu").addEventListener("click", () => scrollToSection("projectsContainer"));
 document.getElementById("homeMenu").addEventListener("click", closeNavAndScrollToTop);
-console.log(mobileMenuBtn)
 
 /////////////////////////////////////
 
@@ -126,35 +158,6 @@ $('.menu').on('mouseleave', function () {
     });
 });
 /////////////////////////////////////
-
-document.addEventListener('DOMContentLoaded', function() {
-  var btnPosnawr = document.querySelectorAll('.btn-posnawr');
-
-  btnPosnawr.forEach(function(btn) {
-    btn.addEventListener('mouseenter', function(e) {
-      var parentOffset = this.getBoundingClientRect(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-      this.querySelector('span').style.top = relY + 'px';
-      this.querySelector('span').style.left = relX + 'px';
-    });
-
-    btn.addEventListener('mouseout', function(e) {
-      var parentOffset = this.getBoundingClientRect(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-      this.querySelector('span').style.top = relY + 'px';
-      this.querySelector('span').style.left = relX + 'px';
-    });
-  });
-
-  var hrefElements = document.querySelectorAll('[href="#"]');
-  hrefElements.forEach(function(elem) {
-    elem.addEventListener('click', function(event) {
-      event.preventDefault();
-    });
-  });
-});
 
 
 //////////////////////////////////////

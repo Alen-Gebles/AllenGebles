@@ -9,7 +9,7 @@
   flex-direction: column;
   z-index: 10;
   align-items: center;
-  transition: 500ms;
+  transition: transform 500ms;
 }
 #introductionContainer{
   position: relative;
@@ -176,7 +176,7 @@
   scale: 1.05;
 }
 .projectBox:hover{
-  box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.084);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.453);
 }
 .proj1{
   grid-column: span 6;
@@ -226,18 +226,18 @@
   width: calc(100% - 70px);
   height: 65px;
   padding: 10px 10px 10px 30px;
-  background: radial-gradient(740.63% 225.28% at 7.95% 70.62%, rgba(28, 30, 32, 0.6) 0%, rgba(152, 158, 165, 0.6) 100%);
+  background-color: rgba(0, 0, 0, 0.227);
   backdrop-filter: blur(40px);
   border-radius: 5px;
   font-size: 12px;
   transition: 300ms;
 }
 .projectName p:nth-child(1){
-  font-size: max(16px, min(3vw, 21px));
+  font-size: max(18px, min(3vw, 21px));
   margin-bottom: 3px;
 }
 .projectName p:nth-child(2){
-  font-size: max(14px, min(3vw, 17px));
+  font-size: max(16px, min(3vw, 17px));
 }
 .projectLink{
   display: flex;
@@ -251,7 +251,7 @@
   transition: 300ms;
 }
 .projectLink svg{
-  width: max(25px, min(3vw, 30px));
+  width: max(28px, min(3vw, 30px));
   height: auto;
 }
 .projectLink:hover{
@@ -432,10 +432,11 @@
   transition: 300ms;
   cursor: pointer;
   box-shadow:0px 0px 15px rgba(0, 0, 0, 0), inset 1px 1px 3px rgba(255, 255, 255, 0);
+  border: 1px solid transparent;
 }
 .workExperience:hover{
-  background: rgba(255, 255, 255, 0.010);
-  box-shadow:0px 0px 15px rgba(0, 0, 0, 0.251), inset 1px 1px 3px rgba(255, 255, 255, 0.035);
+  /*background: rgba(255, 255, 255, 0.003);*/
+  /*box-shadow:0px 0px 15px rgba(0, 0, 0, 0.100), inset 1px 1px 3px rgba(255, 255, 255, 0.035);*/
   opacity: 1;
   backdrop-filter: blur(10.2px);
   -webkit-backdrop-filter: blur(10.2px);
@@ -456,12 +457,26 @@
   color: rgb(173, 173, 173);
 }
 .expTopPart{
+  position: relative;
   display: flex;
   align-items: center;
   padding-bottom: 20px;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-clr);
   transition: 200ms;
+}
+.expTopPart::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 0px);
+  left: 0px;
+  height: 1px;
+  background-color: var(--border-clr);
+  transition: 200ms;
+}
+.workExperience:hover .expTopPart::after{
+  width: calc(100% + 50px);
+  left: -25px;
 }
 .workTime{
   margin-right: 0px;
@@ -603,8 +618,9 @@
   opacity: 0.7;
 }
 .insightsBox:hover .insightsInfo{
-  backdrop-filter: blur(2.2px);
-  -webkit-backdrop-filter: blur(2.2px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background-color: rgba(27, 27, 27, 0.626);
 }
 .insightsBox img{
   width: 100%;
@@ -620,7 +636,7 @@
   bottom: 0;
   backdrop-filter: blur(10.2px);
   -webkit-backdrop-filter: blur(10.2px);
-  background-color: rgba(47, 47, 47, 0.802);
+  background-color: rgba(27, 27, 27, 0.802);
   transition: 400ms;
 }
 .insightsInfoInner{
