@@ -115,7 +115,7 @@
   cursor: pointer;
 }
 .footerLinks a svg{
-  width: max(25px, min(5vw, 35px));
+  width: max(30px, min(5vw, 35px));
   height: auto;
   fill: var(--footer-font-color);
   transition: 350ms;
@@ -172,6 +172,11 @@
 
 
 @media (width <= 726px){
+  .circle {
+    width: 120px;
+    height: 120px;
+    font-size: 15px;
+  }
   #connect{
     margin-top: 50px;
   }
