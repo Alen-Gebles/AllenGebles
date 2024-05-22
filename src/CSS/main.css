@@ -203,8 +203,7 @@
 .proj6{
   grid-column: span 4;
   grid-row: span 4;
-  background-color: rgb(6, 6, 6);
-
+  background: radial-gradient(circle at center, rgb(20, 20, 20) 0%, black 60%);
 }
 
 @keyframes fade {
