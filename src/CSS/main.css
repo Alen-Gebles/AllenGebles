@@ -78,7 +78,6 @@
   color: var(--orange-100);
 }
 /*//////////////////////////*/
-
 .skillSetSlide{
   display: flex;
   align-items: center;
@@ -91,7 +90,7 @@
 }
 .skillSetSlide img{
   height: 50px;
-  width: auto;
+  width: 50px;
   filter: grayscale(1);
   animation: slideIcon 90s linear infinite;
   opacity: 0.5;
