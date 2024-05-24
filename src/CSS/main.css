@@ -16,6 +16,7 @@
   color: var(--main-white-font-clr);
   height: 100vh;
   width: calc(100vw - 60px);
+  max-width: 2500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,24 +79,45 @@
   color: var(--orange-100);
 }
 /*//////////////////////////*/
-.skillSetSlide{
+
+.wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 80px;
-  height: 80px;
   width: 100vw;
-  margin-bottom: 100px;
+  max-width: 2500px;
+  position: relative;
+  height: 80px;
+  overflow: hidden;
   border-block:1px solid var(--border-clr);
+  margin-bottom: 100px;
+}
+
+@keyframes scrollLeft {
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 80px;
+  border-radius: 6px;
+  position: absolute;
+  transform:translateX(max(calc(200px * 16), 100%));
+  animation-name: scrollLeft;
+  animation-duration: 150s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 .skillSetSlide img{
   height: 50px;
-  width: 50px;
+  width: 200px;
   filter: grayscale(1);
-  animation: slideIcon 90s linear infinite;
   opacity: 0.5;
   transition: 300ms;
-  transform: translateX(000px);
 }
 .skillSetSlide img:hover{
   filter: grayscale(0);
@@ -108,18 +130,25 @@
   font-family: Satoshi;
   font-weight: 700;
   letter-spacing: 2px;
-  animation: slideIcon 90s linear infinite;
   opacity: 0.7;
-  transform: translateX(000px);
 }
-@keyframes slideIcon {
-  to{
-    transform: translateX(-2000px);
-  }
-}
-
+.item1 {animation-delay: calc(150s / 16 * (16 - 1) * -1);}
+.item2 {animation-delay: calc(150s / 16 * (16 - 2) * -1);}
+.item3 {animation-delay: calc(150s / 16 * (16 - 3) * -1);}
+.item4 {animation-delay: calc(150s / 16 * (16 - 4) * -1);}
+.item5 {animation-delay: calc(150s / 16 * (16 - 5) * -1);}
+.item6 {animation-delay: calc(150s / 16 * (16 - 6) * -1);}
+.item7 {animation-delay: calc(150s / 16 * (16 - 7) * -1);}
+.item8 {animation-delay: calc(150s / 16 * (16 - 8) * -1);}
+.item9 {animation-delay: calc(150s / 16 * (16 - 9) * -1);}
+.item10 {animation-delay: calc(150s / 16 * (16 - 10) * -1);}
+.item11 {animation-delay: calc(150s / 16 * (16 - 11) * -1);}
+.item12 {animation-delay: calc(150s / 16 * (16 - 12) * -1);}
+.item13 {animation-delay: calc(150s / 16 * (16 - 13) * -1);}
+.item14 {animation-delay: calc(150s / 16 * (16 - 14) * -1);}
+.item15 {animation-delay: calc(150s / 16 * (16 - 15) * -1);}
+.item16 {animation-delay: calc(150s / 16 * (16 - 16) * -1);}
 /*///////////////////////////*/
-
 #projectsContainer{
   width: calc(100vw - 60px);
   max-width: 2500px;
@@ -686,6 +715,7 @@
 }
 
 /*///////////////////////////////////////////////////*/
+
 .horizontalScroll{
   width: 100vw;
   height: auto;
@@ -706,7 +736,7 @@
   flex-shrink: 0;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
-  text-stroke: 1px rgba(255, 255, 255, 0.2);
+  text-stroke: 1px rgba(255, 255, 255, 0.2)15
 }
 .scrollSvg{
   width: max(20px, min(5vw, 40px));
