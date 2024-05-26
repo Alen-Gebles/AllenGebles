@@ -96,16 +96,16 @@
 .btn-posnawr span {
   position: absolute;
   display: block;
-  width: 5px;
-  height: 5px;
-  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
   background-color: var(--orange-300);
   z-index: -1;
-  transition: 400ms;
+  transition: 300ms;
   opacity: 0;
 }
 .btn-posnawr:hover span {
-  scale: 160;
+  scale: 100;
   opacity: 1;
 }
 /*/////////////////////////////*/
