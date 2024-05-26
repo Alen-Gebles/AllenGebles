@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="As a skilled front-end developer, I showcase my passion for web design and development through my portfolio website. Explore my work, skills, and projects." />
     <title>Alen Gebles</title>
+    <link rel="icon" href="src/assets/Images/favicon.png" type="image/x-icon">
 
 
     <!-- Stylesheets -->
@@ -17,15 +18,6 @@
     <link href="src/CSS/FONTS/clashdisplay.css" rel="stylesheet">
     <link href="src/CSS/FONTS/diaclone.css" rel="stylesheet">
     <link href="src/CSS/contact.css" rel="stylesheet">
-
-
-    <!--JavaScript-->
-    <script async src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script async type="module" src="index.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -576,7 +568,11 @@
         
     </div><!--footer-->
 
-
+    <script  src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script  type="module" src="index.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
 <script>
         gsap.registerPlugin(ScrollTrigger);
 
@@ -632,6 +628,46 @@
             });
         });
 
+
+        const circle = $(".circle");
+        const text = $(".text");
+
+        $('.menu').on('mousemove', function (e) {
+            const s = e.pageX - circle.offset().left;
+            const o = e.pageY - circle.offset().top;
+
+            gsap.to(circle, {
+                duration: 0.3,
+                x: (s - circle.width() / 2) / circle.width() * 50,
+                y: (o - circle.height() / 2) / circle.height() * 50,
+                scale: 1.2,
+                ease: "power2.out"
+            });
+
+            gsap.to(text, {
+                duration: 0.3,
+                x: (s - circle.width() / 2) / circle.width() * 80,
+                y: (o - circle.height() / 2) / circle.height() * 80,
+                ease: "power2.out"
+            });
+        });
+
+        $('.menu').on('mouseleave', function () {
+            gsap.to(circle, {
+                duration: 0.3,
+                x: 0,
+                y: 0,
+                scale: 1,
+                ease: "power2.out"
+            });
+
+            gsap.to(text, {
+                duration: 0.3,
+                x: 0,
+                y: 0,
+                ease: "power2.out"
+            });
+        });
     </script>
 </body>
 </html>

@@ -119,10 +119,7 @@
   opacity: 0.5;
   transition: 300ms;
 }
-.skillSetSlide img:hover{
-  filter: grayscale(0);
-  opacity: 0.8;
-}
+
 .skillSetSlide p{
   white-space: nowrap;
   color: var(--faded-text-clr);
@@ -245,6 +242,7 @@
 .projectBox:hover .projectInfo{
   opacity: 1;
 }
+
 .projectInfo{
   display: flex;
   opacity: 0;
@@ -257,11 +255,13 @@
   width: calc(100% - 70px);
   height: 65px;
   padding: 10px 10px 10px 30px;
-  background-color: rgba(0, 0, 0, 0.227);
-  backdrop-filter: blur(40px);
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.709);
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px);
   font-size: 12px;
   transition: 300ms;
+  
 }
 .projectName p:nth-child(1){
   font-size: max(18px, min(3vw, 21px));

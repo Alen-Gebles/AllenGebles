@@ -63,7 +63,7 @@
   font-size: 20px;
   font-family: ClashDisplay-Regular;
   letter-spacing: 3px;
-}
+}/*
 .circle::after{
   position: absolute;
   left: 50%;
@@ -80,7 +80,7 @@
 .circle:hover::after{
   opacity: 1;
   scale: 200;
-}
+}*/
 .footerText{
   color: var(--bg-clr);
   font-size: max(15px, min(2vw, 20px));

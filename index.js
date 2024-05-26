@@ -118,6 +118,7 @@ linktwo.addEventListener("click", toggleContactForm);
 document.getElementById("mobileContact").addEventListener("click", toggleContactFormAndCloseNav);
 
 /////////////////////////////////////
+/*
 const circle = $(".circle");
 const text = $(".text");
 
@@ -156,7 +157,7 @@ $('.menu').on('mouseleave', function () {
         y: 0,
         ease: "power2.out"
     });
-});
+});*/
 /////////////////////////////////////
 
 

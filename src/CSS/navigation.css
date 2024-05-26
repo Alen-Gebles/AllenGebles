@@ -1,7 +1,7 @@
 .navigation-blur{
   width: 100vw;
   height: 85px;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: fixed;
