@@ -1,4 +1,4 @@
-.navigation-blur{
+.navigation-blur {
   width: 100vw;
   height: 85px;
   background: rgba(0, 0, 0, 0);
@@ -8,14 +8,14 @@
   top: 0;
   z-index: 10000;
 }
-.navBlurNoise{
+.navBlurNoise {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url('/Images/otis-redding.png');
+  background-image: url("/Images/otis-redding.png");
   opacity: 0.1;
 }
-#navigation{
+#navigation {
   width: calc(100vw - 80px);
   height: 85px;
   background-color: transparent;
@@ -28,7 +28,7 @@
   padding-inline: 30px 40px;
   z-index: 1000000;
 }
-.navMenu{
+.navMenu {
   list-style: none;
   display: flex;
   gap: 30px;
@@ -37,7 +37,7 @@
 .navMenu li {
   cursor: pointer;
 }
-#logo{
+#logo {
   font-family: Syne;
   font-weight: 700;
   letter-spacing: 1px;
@@ -46,11 +46,11 @@
   color: var(--main-white-font-clr);
   mix-blend-mode: difference;
 }
-.nav-link{
+.nav-link {
   overflow: hidden;
   letter-spacing: 1px;
 }
-.nav-link a{
+.nav-link a {
   position: relative;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
   top: 0;
   text-decoration: none;
   transition: transform 350ms ease-in-out;
-  color: rgb(255, 255, 255);
+  color: var(--main-white-font-clr);
   mix-blend-mode: difference;
   transition: 200ms;
   height: 50px;
@@ -66,7 +66,7 @@
   letter-spacing: 2px;
 }
 .nav-link a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 13px;
@@ -100,10 +100,10 @@
   border: 1px solid var(--border-clr);
   transition: 250ms;
 }
-#viewCv:hover{
-  border: 1px solid rgb(85, 85, 85)
+#viewCv:hover {
+  border: 1px solid rgb(85, 85, 85);
 }
-#menuNav{
+#menuNav {
   display: none;
   transform: scaleX(-1);
   transform-origin: center;
@@ -111,10 +111,10 @@
   z-index: 60;
   mix-blend-mode: difference;
 }
-#menuNav path{
+#menuNav path {
   stroke: var(--main-white-font-clr);
 }
-#menuPath{
+#menuPath {
   transition: 300ms;
 }
 #menuNav:hover #menuPath {
@@ -123,7 +123,7 @@
 
 /*//////////////MOBILE-NAVIGATION////////////////*/
 
-#mobileNavigationMenu{
+#mobileNavigationMenu {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -137,7 +137,7 @@
   transition: 500ms;
   gap: 80px;
 }
-.innerMobileNav{
+.innerMobileNav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -158,7 +158,7 @@
   position: relative;
   z-index: 10;
 }
-.mobile-nav-link a{
+.mobile-nav-link a {
   font-size: 35px;
   color: var(--main-white-font-clr);
   font-family: Satoshi;
@@ -167,10 +167,10 @@
   text-decoration: none;
   transition: 300ms;
 }
-.mobile-nav-link:hover .navLine1{
+.mobile-nav-link:hover .navLine1 {
   width: 0vw;
 }
-.navLine1{
+.navLine1 {
   width: 85vw;
   height: 0px;
   border-bottom: 2px solid var(--main-white-font-clr);
@@ -179,12 +179,12 @@
   transform: rotate(180deg);
   z-index: -1;
 }
-.navLine1{
+.navLine1 {
   right: 110%;
 }
 /*////////////////////////////////////////////////*/
 
-.bottomNav{
+.bottomNav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -204,7 +204,7 @@
   transition: 300ms;
 }
 
-.btmbtn{
+.btmbtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,7 +213,7 @@
   padding: 9px 15px;
   border-radius: 3px;
   background-color: transparent;
-  transition:300ms;
+  transition: 300ms;
   cursor: pointer;
   height: 0;
   width: 0;
@@ -223,36 +223,36 @@
   letter-spacing: 1px;
   font-weight: 100;
 }
-.bottomNav:hover{
+.bottomNav:hover {
   width: 400px;
   height: 40px;
-  background: rgba(20, 19, 19, 0.747);
+  background: rgba(40, 39, 39, 0.144);
 }
-.bottomNav:hover .btmbtn{
+.bottomNav:hover .btmbtn {
   height: auto;
   width: auto;
   opacity: 1;
   font-size: 18px;
 }
-.bottomNav:not(:hover) .btmbtn{
+.bottomNav:not(:hover) .btmbtn {
   transition: 0ms;
 }
-.btmbtn:hover{
+.btmbtn:hover {
   background-color: #bc2503;
 }
 /*//////////////MEDIA-QUERIES///////////////////*/
 
-@media (width <= 700px){
-  #menuNav{
+@media (width <= 700px) {
+  #menuNav {
     display: block;
   }
-  .navMenu{
+  .navMenu {
     display: none;
   }
-  .bottomNav{
+  .bottomNav {
     display: none;
   }
-  #navigation{
+  #navigation {
     width: calc(100vw - 50px);
     padding-inline: 30px 20px;
   }

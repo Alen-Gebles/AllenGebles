@@ -1,57 +1,76 @@
 const mobileNav = document.getElementById("mobileNavigationMenu");
 const bodyElement = document.body;
-const btmbtn = document.querySelectorAll(".btmbtn")
-const bottomNav = document.getElementById("bottomNav")
-const linktwo = document.getElementById("linktwo")
-const contactMainContainer = document.getElementById("contactMainContainer")
-const mainContainer = document.getElementById("mainContainer")
-const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn")
+const btmbtn = document.querySelectorAll(".btmbtn");
+const bottomNav = document.getElementById("bottomNav");
+const linktwo = document.getElementById("linktwo");
+const contactMainContainer = document.getElementById("contactMainContainer");
+const mainContainer = document.getElementById("mainContainer");
+const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
+///////////////////////////////////////
 
 ///////////////////////////////////////
 
-document.addEventListener('DOMContentLoaded', function() {
-  var btnPosnawr = document.querySelectorAll('.btn-posnawr');
+const cards = document.querySelectorAll(".projectBox");
 
-  btnPosnawr.forEach(function(btn) {
-    btn.addEventListener('mouseenter', function(e) {
+cards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / card.offsetWidth - 0.5;
+    const y = (e.clientY - rect.top) / card.offsetHeight - 0.5;
+    const rotateX = y * 20;
+    const rotateY = -x * 20;
+
+    card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  });
+});
+
+///////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  var btnPosnawr = document.querySelectorAll(".btn-posnawr");
+
+  btnPosnawr.forEach(function (btn) {
+    btn.addEventListener("mouseenter", function (e) {
       var parentOffset = this.getBoundingClientRect(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-      this.querySelector('span').style.top = relY + 'px';
-      this.querySelector('span').style.left = relX + 'px';
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      this.querySelector("span").style.top = relY + "px";
+      this.querySelector("span").style.left = relX + "px";
     });
 
-    btn.addEventListener('mouseout', function(e) {
+    btn.addEventListener("mouseout", function (e) {
       var parentOffset = this.getBoundingClientRect(),
-          relX = e.pageX - parentOffset.left,
-          relY = e.pageY - parentOffset.top;
-      this.querySelector('span').style.top = relY + 'px';
-      this.querySelector('span').style.left = relX + 'px';
+        relX = e.pageX - parentOffset.left,
+        relY = e.pageY - parentOffset.top;
+      this.querySelector("span").style.top = relY + "px";
+      this.querySelector("span").style.left = relX + "px";
     });
   });
 
   var hrefElements = document.querySelectorAll('[href="#"]');
-  hrefElements.forEach(function(elem) {
-    elem.addEventListener('click', function(event) {
+  hrefElements.forEach(function (elem) {
+    elem.addEventListener("click", function (event) {
       event.preventDefault();
     });
   });
 });
 
-
 ///////////////////////////////////////
 
 mobileMenuBtn.forEach((menuBtn) => {
   menuBtn.addEventListener("click", () => {
-  if (mobileNav.style.transform === "translateX(-100%)") {
-    mobileNav.style.transform = "translateX(0%)";
-    bodyElement.style.overflow = "hidden";
-  } else {
-    closeNav();
-  }
-})
-})
-
+    if (mobileNav.style.transform === "translateX(-100%)") {
+      mobileNav.style.transform = "translateX(0%)";
+      bodyElement.style.overflow = "hidden";
+    } else {
+      closeNav();
+    }
+  });
+});
 
 function closeNav() {
   mobileNav.style.transform = "translateX(-100%)";
@@ -71,18 +90,23 @@ function scrollToSection(sectionId) {
   }
 }
 
-document.getElementById("projectsMenu").addEventListener("click", () => scrollToSection("projectsContainer"));
-document.getElementById("homeMenu").addEventListener("click", closeNavAndScrollToTop);
+document
+  .getElementById("projectsMenu")
+  .addEventListener("click", () => scrollToSection("projectsContainer"));
+document
+  .getElementById("homeMenu")
+  .addEventListener("click", closeNavAndScrollToTop);
 
 /////////////////////////////////////
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
   let scrollPosition = window.pageYOffset;
   let windowWidth = window.innerWidth;
 
   let parallaxSpeed = windowWidth > 1000 ? 0.35 : 0.2;
 
-  document.getElementById("introductionContainer").style.transform = 'translateY(' + scrollPosition * parallaxSpeed + 'px)';
+  document.getElementById("introductionContainer").style.transform =
+    "translateY(" + scrollPosition * parallaxSpeed + "px)";
 });
 
 /////////////////////////////////////
@@ -115,7 +139,9 @@ function toggleContactFormAndCloseNav() {
 }
 
 linktwo.addEventListener("click", toggleContactForm);
-document.getElementById("mobileContact").addEventListener("click", toggleContactFormAndCloseNav);
+document
+  .getElementById("mobileContact")
+  .addEventListener("click", toggleContactFormAndCloseNav);
 
 /////////////////////////////////////
 /*
@@ -160,21 +186,20 @@ $('.menu').on('mouseleave', function () {
 });*/
 /////////////////////////////////////
 
-
 //////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function() {
-  let scrollToBottomButton = document.getElementById('scrollToBottomButton');
+document.addEventListener("DOMContentLoaded", function () {
+  let scrollToBottomButton = document.getElementById("scrollToBottomButton");
 
-  scrollToBottomButton.addEventListener('click', function() {
+  scrollToBottomButton.addEventListener("click", function () {
     let documentHeight = document.documentElement.scrollHeight; // Height of the entire document
     let viewportHeight = window.innerHeight; // Viewport height
-    let targetPosition = documentHeight + (0.7 * viewportHeight); // Bottom of the page + 70vh
+    let targetPosition = documentHeight + 0.7 * viewportHeight; // Bottom of the page + 70vh
 
-      window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-      });
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
   });
 });
 

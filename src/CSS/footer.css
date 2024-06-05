@@ -1,9 +1,7 @@
-#footerContainer{
+#footerContainer {
   height: 70vh;
   width: 100vw;
-  background: 
-  var(--footer-bg-color),
-  url('/Images/otis-redding.png');
+  background: var(--footer-bg-color), url("/Images/otis-redding.png");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -13,7 +11,7 @@
   position: relative;
 }
 
-.innerFooterContainer{
+.innerFooterContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +19,7 @@
   width: calc(100% - 6vw);
 }
 
-.footerBoxInner{
+.footerBoxInner {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -58,12 +56,12 @@
   background-color: var(--orange-300);
   overflow: hidden;
   text-align: center;
-  color: var(--main-white-font-clr);
+  color: var(--bg-clr);
   font-weight: 200;
   font-size: 20px;
   font-family: ClashDisplay-Regular;
   letter-spacing: 3px;
-}/*
+} /*
 .circle::after{
   position: absolute;
   left: 50%;
@@ -81,19 +79,19 @@
   opacity: 1;
   scale: 200;
 }*/
-.footerText{
+.footerText {
   color: var(--bg-clr);
   font-size: max(15px, min(2vw, 20px));
 }
 
-#connect{
+#connect {
   font-family: ClashDisplay-Medium;
   font-weight: 600;
   letter-spacing: 4px;
   font-size: max(40px, min(7vw, 125px));
   word-wrap: break-word;
   width: 10ch;
-  color: var(--footer-font-color);
+  color: var(--bg-clr);
 }
 
 .footerLinks {
@@ -105,82 +103,81 @@
   cursor: pointer;
   z-index: 100;
 }
-.footerLinks a{
+.footerLinks a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border:2px solid var(--footer-font-color);
+  border: 2px solid var(--bg-clr);
   border-top: none;
   transition: 400ms;
   cursor: pointer;
 }
-.footerLinks a svg{
+.footerLinks a svg {
   width: max(30px, min(5vw, 35px));
   height: auto;
-  fill: var(--footer-font-color);
+  fill: var(--bg-clr);
   transition: 350ms;
 }
-.footerLinks a:nth-child(1){
+.footerLinks a:nth-child(1) {
   flex: 1;
   border-left: none;
 }
-.footerLinks a:nth-child(3){
+.footerLinks a:nth-child(3) {
   flex: 1;
   border-right: none;
 }
-.footerLinks a:nth-child(2){
+.footerLinks a:nth-child(2) {
   opacity: 0;
   border: none;
   width: 5px;
   background-color: rgb(255, 255, 255);
 }
-.footerLinks a:nth-child(2):hover{
+.footerLinks a:nth-child(2):hover {
   opacity: 1;
   width: 60%;
   background-color: rgb(255, 0, 0);
-  border-bottom: 2px solid var(--footer-font-color);
+  border-bottom: 2px solid var(--bg-clr);
 }
-.footerLinks a:hover{
+.footerLinks a:hover {
   background-color: var(--orange-300);
 }
-.footerLinks a:hover svg{
+.footerLinks a:hover svg {
   fill: white;
 }
 
 /*/////////////////////////////////////////////////////*/
-@media (max-width: 1300px){
-.innerFooterContainer{
-  flex-direction: column;
-  gap: 100px;
-}
-.footerBoxInner{
-  width: 100%;
-  flex-direction: column;
-}
-#connect{
-  margin-inline: auto;
-  word-wrap: normal;
-  width: fit-content;
-  text-align: center;
-}
-.footerText{
-  width: 70%;
-  text-align: center;
-  margin-inline: auto;
-}
+@media (max-width: 1300px) {
+  .innerFooterContainer {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .footerBoxInner {
+    width: 100%;
+    flex-direction: column;
+  }
+  #connect {
+    margin-inline: auto;
+    word-wrap: normal;
+    width: fit-content;
+    text-align: center;
+  }
+  .footerText {
+    width: 70%;
+    text-align: center;
+    margin-inline: auto;
+  }
 }
 
-
-@media (width <= 726px){
+@media (width <= 726px) {
   .circle {
     width: 120px;
     height: 120px;
     font-size: 15px;
   }
-  #connect{
+  #connect {
     margin-top: 50px;
   }
-  .innerFooterContainer{
+  .innerFooterContainer {
     flex-direction: column;
     gap: 50px;
   }

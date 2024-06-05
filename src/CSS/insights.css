@@ -2,7 +2,7 @@
   z-index: 100;
 }
 
-#insightsContainer{
+#insightsContainer {
   max-width: 2000px;
   width: calc(100% - 60px);
   min-height: 100vh;
@@ -16,7 +16,7 @@
   color: var(--main-white-font-clr);
 }
 
-.insightsTitle{
+.insightsTitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,31 +26,31 @@
   color: var(--main-white-font-clr);
   gap: 40px;
 }
-.insightsTitle{
-  font-size:  max(30px, min(6vw, 60px));
+.insightsTitle {
+  font-size: max(30px, min(6vw, 60px));
   font-family: ClashDisplay-Medium;
   font-weight: 400;
 }
-.insightsTitle p:nth-child(1){
+.insightsTitle p:nth-child(1) {
   width: 850px;
 }
-.insightsInfo{
+.insightsInfo {
   z-index: 100;
   height: auto;
-  width:100%;
-  font-size:  max(18px, min(4vw, 40px));
+  width: 100%;
+  font-size: max(18px, min(4vw, 40px));
   margin-block: 80px 30px;
   color: var(--faded-text-clr);
 }
 
-.insightsPhoto{
+.insightsPhoto {
   z-index: 100;
   height: auto;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
-.insightsImg{
+.insightsImg {
   width: 100%;
   min-height: 300px;
   height: auto;
@@ -58,7 +58,7 @@
   margin-bottom: 50px;
   object-fit: cover;
 }
-.insightsPhoto-added{
+.insightsPhoto-added {
   width: 100%;
   max-width: 950px;
   min-height: 300px;
@@ -68,7 +68,7 @@
   object-fit: cover;
   margin-inline: auto;
 }
-.section-one{
+.section-one {
   display: flex;
   flex-direction: column;
   margin-inline: auto;
@@ -78,36 +78,36 @@
   height: auto;
   margin-bottom: 50px;
 }
-.section-one-title{
-  font-size:  max(20px, min(4vw, 40px));
+.section-one-title {
+  font-size: max(20px, min(4vw, 40px));
   font-family: ClashDisplay-Medium;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 50px;
 }
-.section-two-title{
-  font-size:  max(20px, min(4vw, 34px));
+.section-two-title {
+  font-size: max(20px, min(4vw, 34px));
   font-family: ClashDisplay-Medium;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 50px;
 }
-.section-text{
-  font-size:  max(17px, min(4vw, 23px));
+.section-text {
+  font-size: max(17px, min(4vw, 23px));
   font-weight: 100;
   letter-spacing: 0.5px;
   color: var(--lightgray-clr);
 }
-.section-one:last-child{
+.section-one:last-child {
   margin-bottom: 200px;
 }
-.insightsList{
+.insightsList {
   color: var(--lightgray-clr);
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size:  max(16px, min(4vw, 20px));
+  font-size: max(16px, min(4vw, 20px));
   font-weight: 100;
   letter-spacing: 0.5px;
 }

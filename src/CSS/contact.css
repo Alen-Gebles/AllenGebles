@@ -1,6 +1,4 @@
-
-
-#contactMainContainer{
+#contactMainContainer {
   display: none;
   position: fixed;
   top: 0;
@@ -11,10 +9,10 @@
   background-color: var(--bg-clr);
   transform: translateY(-105vh);
   animation: none;
-  transition: 500ms;
+  transition: transform 500ms;
 }
 
-.ContactHeadline{
+.ContactHeadline {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,19 +21,19 @@
   width: calc(100% - 40px);
   background-color: transparent;
   border-bottom: 2px solid var(--border-clr);
-  color: white;
+  color: var(--main-white-font-clr);
   padding-inline: 20px;
 }
-.headline{
+.headline {
   font-size: max(45px, min(7vw, 80px));
   font-family: ClashDisplay-Medium;
   font-weight: 400;
   text-align: center;
 }
-.headline span{
+.headline span {
   color: var(--orange-100);
 }
-.infoBox{
+.infoBox {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px 100px;
@@ -47,20 +45,20 @@
   row-gap: 80px;
   margin-top: 120px;
 }
-.email{
+.email {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: max(30px, min(5vw, 60px));
   font-family: ClashDisplay-Medium;
   font-weight: 400;
-  color: white;
+  color: var(--main-white-font-clr);
   grid-column: span 2;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.email a{
+.email a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,14 +68,17 @@
   border: 1px solid transparent;
   transition: 300ms;
 }
-.email a:hover{
+.email a:hover {
   border: 1px solid var(--border-clr);
 }
-.emailSvg{
+.emailSvg {
   height: max(30px, min(5vw, 50px));
   width: max(30px, min(5vw, 50px));
 }
-.btnSocial{
+.emailSvg path {
+  stroke: var(--main-white-font-clr);
+}
+.btnSocial {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +86,7 @@
   background-color: transparent;
   border: 2px solid var(--border-clr);
   border-radius: 10px;
-  color: white;
+  color: var(--main-white-font-clr);
   font-size: max(20px, min(5vw, 30px));
   cursor: pointer;
 }
@@ -110,40 +111,40 @@
 }
 /*/////////////////////////////*/
 
-.footerLinksContact{
+.footerLinksContact {
   display: flex;
   position: absolute;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   gap: 15px;
+  font-size: max(10px, min(2vw, 17px));
 }
-.footerLinksContact p{
+.footerLinksContact p {
   color: var(--lightgray-clr);
   font-weight: 100;
   white-space: nowrap;
 }
 
 @media (width < 740px) {
-  .infoBox{
+  .infoBox {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 80px);
     width: calc(100% - 50px);
     padding-inline: 25px;
     row-gap: 30px;
   }
-  .email{
+  .email {
     grid-column: span 1;
     gap: 15px;
     flex-wrap: nowrap;
     font-size: max(20px, min(6vw, 60px));
   }
-  .emailSvg{
+  .emailSvg {
     height: max(20px, min(6vw, 50px));
     width: max(20px, min(6vw, 50px));
   }
   .btn-posnawr:hover span {
     scale: 500;
   }
-
 }
