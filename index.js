@@ -10,21 +10,45 @@ const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
 
 ///////////////////////////////////////
 
-const cards = document.querySelectorAll(".projectBox");
+const $cards = document.querySelectorAll(".projectBox");
 
-cards.forEach((card) => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / card.offsetWidth - 0.5;
-    const y = (e.clientY - rect.top) / card.offsetHeight - 0.5;
-    const rotateX = y * 20;
-    const rotateY = -x * 20;
+function rotateToMouse(e, $card, bounds) {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+  const leftX = mouseX - bounds.x;
+  const topY = mouseY - bounds.y;
+  const center = {
+    x: leftX - bounds.width / 2,
+    y: topY - bounds.height / 2,
+  };
+  const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
-    card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
-  });
+  $card.style.transform = `
+    rotate3d(
+      ${center.y / 120},
+      ${-center.x / 120},
+      0,
+      ${-Math.log(distance) * 2}deg
+    )
+  `;
+}
 
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+$cards.forEach(($card) => {
+  let bounds;
+
+  $card.addEventListener("mouseenter", () => {
+    bounds = $card.getBoundingClientRect();
+    const mouseMoveHandler = (e) => rotateToMouse(e, $card, bounds);
+    document.addEventListener("mousemove", mouseMoveHandler);
+
+    $card.addEventListener(
+      "mouseleave",
+      () => {
+        document.removeEventListener("mousemove", mouseMoveHandler);
+        $card.style.transform = "";
+      },
+      { once: true }
+    );
   });
 });
 

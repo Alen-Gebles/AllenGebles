@@ -226,7 +226,7 @@
 .bottomNav:hover {
   width: 400px;
   height: 40px;
-  background: rgba(40, 39, 39, 0.144);
+  background: rgb(8, 8, 8);
 }
 .bottomNav:hover .btmbtn {
   height: auto;

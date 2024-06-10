@@ -115,7 +115,7 @@
   height: 50px;
   width: 200px;
   filter: grayscale(1);
-  opacity: 1;
+  opacity: 0.5;
   transition: 300ms;
 }
 
@@ -126,7 +126,7 @@
   font-family: Satoshi;
   font-weight: 700;
   letter-spacing: 2px;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 .item1 {
   animation-delay: calc(150s / 16 * (16 - 1) * -1);
@@ -223,6 +223,9 @@
   cursor: pointer;
   color: var(--main-white-font-clr);
   text-decoration: none;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
 }
 .projectBox img {
   width: 100%;

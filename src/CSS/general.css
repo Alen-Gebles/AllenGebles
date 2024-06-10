@@ -78,6 +78,7 @@ html {
   scroll-padding: 250px;
 }
 body {
+  scroll-behavior: smooth !important;
   position: relative;
   height: auto;
   width: auto;
@@ -98,7 +99,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/Images/otis-redding.png");
+  background-image: url("/src/assets/Images/otis-redding.png");
   opacity: 0.3;
 }
 #themeBtn {
