@@ -7,7 +7,22 @@ const contactMainContainer = document.getElementById("contactMainContainer");
 const mainContainer = document.getElementById("mainContainer");
 const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
 ///////////////////////////////////////
+function pad(number) {
+  return (number < 10 ? "0" : "") + number;
+}
 
+function updateTime() {
+  const now = new Date();
+  const serbiaTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Belgrade" }));
+  const hours = serbiaTime.getHours() % 12 || 12;
+  const meridian = serbiaTime.getHours() >= 12 ? "pm" : "am";
+
+  const timeString = `${pad(hours)}:${pad(serbiaTime.getMinutes())}:${pad(serbiaTime.getSeconds())}${meridian}`;
+  document.getElementById("time").textContent = timeString;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
 ///////////////////////////////////////
 
 const $cards = document.querySelectorAll(".projectBox");
