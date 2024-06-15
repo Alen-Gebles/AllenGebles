@@ -9,7 +9,7 @@
 }
 
 .banner {
-  margin-block: 150px;
+  margin-top: 150px;
   height: auto;
   width: 100%;
 }
@@ -137,7 +137,7 @@
 }
 .challengeName{
   flex: 1;
-  font-size: max(14px, min(4vw, 34px));
+  font-size: max(20px, min(4vw, 34px));
 }
 .nameSticky{
   display: flex;
@@ -148,8 +148,8 @@
   top: 40vh;
 }
 .star{
-  width: 20px;
-  height: 20px;
+  width: max(14px, min(4vw, 20px));
+  height: auto;
 }
 .star path{
   fill: white;
