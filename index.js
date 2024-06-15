@@ -6,6 +6,20 @@ const linktwo = document.getElementById("linktwo");
 const contactMainContainer = document.getElementById("contactMainContainer");
 const mainContainer = document.getElementById("mainContainer");
 const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
+
+//////////////////////////////////////
+
+document.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  const scaleFactor = 1 + scrollPosition / 2500; 
+  const image = document.querySelector('.projectPhoto');
+  image.style.transform = `scale(${scaleFactor})`;
+
+  const maxScroll = 1200;
+  const opacity = Math.max(0, 1 - scrollPosition / maxScroll); 
+  image.style.opacity = opacity;
+});
+
 ///////////////////////////////////////
 function pad(number) {
   return (number < 10 ? "0" : "") + number;

@@ -28,11 +28,25 @@
   color: var(--faded-text-clr);
 }
 .projectPhoto {
+  position: relative;
   z-index: 100;
   height: auto;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  z-index: -1;
+  mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 80%);
+  -webkit-mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 80%);
+}
+@keyframes photoFade {
+  from{
+    opacity: 1;
+    scale: 1;
+  }
+  to{
+    opacity: 0;
+    scale: 1.5;
+  }
 }
 .projectPhotoSup {
   z-index: 100;
@@ -100,8 +114,56 @@
   color: rgb(97, 176, 221);
 }
 
+.challenges{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-block: 150px;
+}
+.challengePart{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
+}
+.challengePart:nth-child(1){
+  padding-bottom: 40px;
+}
+.challengePart:nth-child(2){
+  padding-top: 40px;
+  border-top: 1px solid var(--lightgray-clr);
+}
+.challengeName{
+  flex: 1;
+  font-size: max(14px, min(4vw, 34px));
+}
+.nameSticky{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40vh;
+}
+.star{
+  width: 20px;
+  height: 20px;
+}
+.star path{
+  fill: white;
+}
+.challengeText{
+  flex: 1.7;
+  font-size: max(14px, min(4vw, 30px));
+}
+
 @media (max-width: 1100px) {
   .projectDetails {
+    flex-direction: column;
+  }
+  .challengePart{
     flex-direction: column;
   }
 }
