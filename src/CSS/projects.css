@@ -137,7 +137,7 @@
 }
 .challengeName{
   flex: 1;
-  font-size: max(20px, min(4vw, 34px));
+  font-size: max(14px, min(4vw, 27px));
 }
 .nameSticky{
   display: flex;
@@ -156,7 +156,7 @@
 }
 .challengeText{
   flex: 1.7;
-  font-size: max(14px, min(4vw, 30px));
+  font-size: max(14px, min(4vw, 27px));
 }
 
 @media (max-width: 1100px) {
