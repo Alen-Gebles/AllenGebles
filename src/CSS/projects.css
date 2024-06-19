@@ -35,8 +35,8 @@
   border-radius: 10px;
   overflow: hidden;
   z-index: -1;
-  mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 80%);
-  -webkit-mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 80%);
+  mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to bottom, var(--bg-clr) 0%, transparent 90%);
 }
 @keyframes photoFade {
   from{

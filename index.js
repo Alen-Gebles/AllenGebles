@@ -170,7 +170,6 @@ function toggleContactForm() {
     linktwo.innerText = "Home";
     setTimeout(() => {
       contactMainContainer.style.transform = "translateY(0vh)";
-      mainContainer.style.transform = `translateY(105vh)`;
     }, 1);
     setTimeout(() => {
       bodyElement.style.overflowY = "hidden";
@@ -178,7 +177,6 @@ function toggleContactForm() {
   } else {
     contactMainContainer.style.transform = "translateY(-105vh)";
     bodyElement.style.overflowY = "auto";
-    mainContainer.style.transform = `translateY(-0vh)`;
     linktwo.innerText = "Contact";
     setTimeout(() => {
       contactMainContainer.style.display = "none";
@@ -192,11 +190,8 @@ function toggleContactFormAndCloseNav() {
 }
 
 linktwo.addEventListener("click", toggleContactForm);
-document
-  .getElementById("mobileContact")
-  .addEventListener("click", toggleContactFormAndCloseNav);
-
-/////////////////////////////////////
+document.getElementById("mobileContact").addEventListener("click", toggleContactFormAndCloseNav);
+/////////////////////////////////////s
 /*
 const circle = $(".circle");
 const text = $(".text");
