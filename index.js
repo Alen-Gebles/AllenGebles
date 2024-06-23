@@ -38,7 +38,7 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 ///////////////////////////////////////
-
+/*
 const $cards = document.querySelectorAll(".projectBox");
 
 function rotateToMouse(e, $card, bounds) {
@@ -80,7 +80,7 @@ $cards.forEach(($card) => {
     );
   });
 });
-
+*/
 ///////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
