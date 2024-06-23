@@ -6,6 +6,7 @@ const linktwo = document.getElementById("linktwo");
 const contactMainContainer = document.getElementById("contactMainContainer");
 const mainContainer = document.getElementById("mainContainer");
 const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
+//////////////////////////////////////
 
 //////////////////////////////////////
 
@@ -38,6 +39,37 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 ///////////////////////////////////////
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll(".hoverCursor");
+    cards.forEach(card => {
+      // Create circle element
+      const circle = document.createElement('div');
+      circle.classList.add('circleHover');
+      circle.innerText = "View";
+      card.appendChild(circle);
+      // Hide circle initially
+      circle.style.display = 'none';
+      // Add event listeners
+      card.addEventListener('mouseenter', () => {
+        circle.style.display = 'flex';
+        card.style.cursor = 'none'; // Hide default cursor
+      });
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        circle.style.left = `${x - circle.offsetWidth / 2}px`;
+        circle.style.top = `${y - circle.offsetHeight / 2}px`;
+      });
+      card.addEventListener('mouseleave', () => {
+        circle.style.display = 'none';
+        card.style.cursor = 'default'; // Restore default cursor
+      });
+    });
+});
+
+
+//////////////////////////////////////
 /*
 const $cards = document.querySelectorAll(".projectBox");
 

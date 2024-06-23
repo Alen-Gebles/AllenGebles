@@ -102,6 +102,19 @@ body::before {
   background-image: url("/src/assets/Images/otis-redding.png");
   opacity: 0.3;
 }
+.circleHover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  color: black;
+}
 #themeBtn {
   z-index: 1000000000;
   height: 15px;

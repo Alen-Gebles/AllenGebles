@@ -1,3 +1,4 @@
+
 #mainContainer {
   position: relative;
   max-width: 1500px;
@@ -312,15 +313,11 @@
   height: 60px;
   width: 60px;
   border: 2px solid var(--faded-text-clr);
-  cursor: pointer;
   transition: 300ms;
 }
 .projectLink svg {
   width: max(28px, min(3vw, 30px));
   height: auto;
-}
-.projectLink:hover {
-  border: 2px solid rgba(200, 203, 221, 0.726);
 }
 
 .availableForWork {
@@ -337,7 +334,7 @@
   text-decoration: none;
 }
 .availableForWork p {
-  color: var(--orange-200);
+  color: var(--orange-100);
   letter-spacing: 1px;
 }
 
@@ -345,7 +342,7 @@
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: var(--orange-200);
+  background-color: var(--orange-100);
   border-radius: 50%;
   animation: pulse 2s infinite linear;
   opacity: 0;
@@ -354,7 +351,7 @@
   position: relative;
   width: 12px;
   height: 12px;
-  background-color: var(--orange-200);
+  background-color: var(--orange-100);
   border-radius: 50%;
 }
 
