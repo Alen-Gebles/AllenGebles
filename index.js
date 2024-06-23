@@ -7,7 +7,6 @@ const contactMainContainer = document.getElementById("contactMainContainer");
 const mainContainer = document.getElementById("mainContainer");
 const mobileMenuBtn = document.querySelectorAll(".mobileMenuBtn");
 //////////////////////////////////////
-
 //////////////////////////////////////
 
 document.addEventListener('scroll', function () {

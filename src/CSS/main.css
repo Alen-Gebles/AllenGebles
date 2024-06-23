@@ -91,26 +91,32 @@
   border-block: 1px solid var(--border-clr);
   margin-bottom: 100px;
 }
-
-@keyframes scrollLeft {
-  to {
-    transform: translateX(-200px);
+.wrapper::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, var(--bg-clr) 2%, transparent 5%,transparent 94%, var(--bg-clr) 97%);
+}
+.innerSlide{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  gap: 80px;
+  animation: slideMovement 90s linear infinite;
+  z-index: 20;
+}
+@keyframes slideMovement {
+  to{
+    transform: translateX(-2500px);
   }
 }
-
 .item {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 200px;
   height: 80px;
-  border-radius: 6px;
-  position: absolute;
-  transform: translateX(max(calc(200px * 16), 100%));
-  animation-name: scrollLeft;
-  animation-duration: 150s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 .skillSetSlide img {
   height: 50px;
@@ -119,7 +125,9 @@
   opacity: 0.5;
   transition: 300ms;
 }
-
+.skillSetSlide img:hover{
+  filter: grayscale(0);
+}
 .skillSetSlide p {
   white-space: nowrap;
   color: var(--footer-bg-color);
@@ -128,54 +136,6 @@
   font-weight: 700;
   letter-spacing: 2px;
   opacity: 0.4;
-}
-.item1 {
-  animation-delay: calc(150s / 16 * (16 - 1) * -1);
-}
-.item2 {
-  animation-delay: calc(150s / 16 * (16 - 2) * -1);
-}
-.item3 {
-  animation-delay: calc(150s / 16 * (16 - 3) * -1);
-}
-.item4 {
-  animation-delay: calc(150s / 16 * (16 - 4) * -1);
-}
-.item5 {
-  animation-delay: calc(150s / 16 * (16 - 5) * -1);
-}
-.item6 {
-  animation-delay: calc(150s / 16 * (16 - 6) * -1);
-}
-.item7 {
-  animation-delay: calc(150s / 16 * (16 - 7) * -1);
-}
-.item8 {
-  animation-delay: calc(150s / 16 * (16 - 8) * -1);
-}
-.item9 {
-  animation-delay: calc(150s / 16 * (16 - 9) * -1);
-}
-.item10 {
-  animation-delay: calc(150s / 16 * (16 - 10) * -1);
-}
-.item11 {
-  animation-delay: calc(150s / 16 * (16 - 11) * -1);
-}
-.item12 {
-  animation-delay: calc(150s / 16 * (16 - 12) * -1);
-}
-.item13 {
-  animation-delay: calc(150s / 16 * (16 - 13) * -1);
-}
-.item14 {
-  animation-delay: calc(150s / 16 * (16 - 14) * -1);
-}
-.item15 {
-  animation-delay: calc(150s / 16 * (16 - 15) * -1);
-}
-.item16 {
-  animation-delay: calc(150s / 16 * (16 - 16) * -1);
 }
 /*///////////////////////////*/
 #projectsContainer {
