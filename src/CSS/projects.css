@@ -108,7 +108,7 @@
 }
 .details_link {
   z-index: 100;
-  color: rgb(111, 199, 250);
+  color: rgb(112, 199, 250);
   cursor: pointer;
 }
 .details_link:hover {
