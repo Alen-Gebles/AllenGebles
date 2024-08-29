@@ -44,8 +44,8 @@ p {
   --about-text-font-size-medium: max(16px, min(2.5vw, 27px));
   --about-text-font-size-bigger: max(16px, min(2vw, 20px));
   --about-text-font-size-max: max(17px, min(4vw, 45px));
-  --mobile-nav-bg-color: #121212;
-  --bg-clr: #121212;
+  --mobile-nav-bg-color: #040404;
+  --bg-clr: #040404;
   --main-white-font-clr: rgb(254, 254, 254);
   --font-color: rgb(207, 207, 207);
   --faded-font-clr: rgba(255, 255, 255, 0.736);
