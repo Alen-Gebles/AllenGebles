@@ -41,17 +41,14 @@ updateTime();
   document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll(".hoverCursor");
     cards.forEach(card => {
-      // Create circle element
       const circle = document.createElement('div');
       circle.classList.add('circleHover');
       circle.innerText = "View";
       card.appendChild(circle);
-      // Hide circle initially
       circle.style.display = 'none';
-      // Add event listeners
       card.addEventListener('mouseenter', () => {
         circle.style.display = 'flex';
-        card.style.cursor = 'none'; // Hide default cursor
+        card.style.cursor = 'none';
       });
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -62,7 +59,7 @@ updateTime();
       });
       card.addEventListener('mouseleave', () => {
         circle.style.display = 'none';
-        card.style.cursor = 'default'; // Restore default cursor
+        card.style.cursor = 'default'; 
       });
     });
 });

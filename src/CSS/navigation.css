@@ -197,7 +197,7 @@
   width: 100px;
   height: 5px;
   border-radius: 100vh;
-  background: rgba(18, 18, 18, 0.089);
+  background: rgba(18, 18, 18, 0.264);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid var(--border-clr);
@@ -226,7 +226,7 @@
 .bottomNav:hover {
   width: 400px;
   height: 40px;
-  background: rgba(41, 41, 41, 0.268);
+  background: rgba(41, 41, 41, 0.636);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);;
 }
@@ -240,7 +240,7 @@
   transition: 0ms;
 }
 .btmbtn:hover {
-  color: var(--orange-100);
+  color: #f27c62;
 }
 /*//////////////MEDIA-QUERIES///////////////////*/
 
