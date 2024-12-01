@@ -117,6 +117,7 @@
   align-items: center;
   width: 200px;
   height: 80px;
+  font-family: Satoshi;
 }
 .skillSetSlide img {
   height: 50px;
@@ -132,7 +133,7 @@
   white-space: nowrap;
   color: var(--footer-bg-color);
   font-size: 20px;
-  font-family: Satoshi;
+  
   font-weight: 700;
   letter-spacing: 2px;
   opacity: 0.4;
